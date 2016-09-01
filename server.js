@@ -7,7 +7,7 @@ glimpseServer.server.init()
 glimpseAgent.agent.init({
     server: glimpseServer.server
 });
-var express = require('express');
+
 const app = express();
 var http = require('http');
 const server = require('http').createServer(app);
