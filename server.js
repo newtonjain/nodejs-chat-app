@@ -1,7 +1,13 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 
+var glimpseAgent = require('@glimpse/glimpse-node-agent'),
+    glimpseServer = require('@glimpse/glimpse-node-server')
 
+glimpseServer.server.init()
+glimpseAgent.agent.init({
+    server: glimpseServer.server
+});
 
 const app = express();
 var http = require('http');
